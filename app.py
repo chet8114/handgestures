@@ -5,7 +5,8 @@ import numpy as np
 # ===============================
 # Detect Streamlit Cloud
 # ===============================
-IS_CLOUD = os.getenv("STREAMLIT_CLOUD") == "1"
+IS_CLOUD = os.path.exists("/mount/src")
+
 
 
 if not IS_CLOUD:
